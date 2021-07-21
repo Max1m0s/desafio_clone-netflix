@@ -1,3 +1,39 @@
+:root { /* raíz do documento */
+    --vermelho: #E50914;     /* declaração de variável no CSS */
+    --preta: #141414;
+}
+
+* { /*RESET CSS - Regra de formatação padronizadora em diferentes navegadores*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*limita o tamanho de tudo até a borda da caixa, não rompendo a saída dela*/
+}
+
 body {
-    background-color: blue;
+    background: var(--preta);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header .container { /* caixa de navegação e logo || uso do FLEXBOX */
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* alinhamento vertical */
+    justify-content: space-between; /* justify content: alinhamento horizontal || space-between - espaço entre os itens/tags */
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black' , Times;
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover { /*formatação para evento específico*/
+    color: #fff;
 }
