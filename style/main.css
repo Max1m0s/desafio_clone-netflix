@@ -25,7 +25,6 @@ header .container { /* caixa de navegação e logo || uso do FLEXBOX */
 }
 
 header .logo {
-    margin-left: 5px;
     color: var(--vermelho);
     font-family: 'Arial Black' , Times;
     font-size: 40px;
@@ -88,5 +87,22 @@ header nav a:hover { /* formatação para evento específico */
 
  .botao i {
      margin-right: 8px;
+ }
+
+ .container {
+     margin-left: 20px;
+ }
+
+ .filme-principal .container {
+     width: 70%; /* % garante fluidez e responsividade ao tamanho da tela */
+ }
+
+
+ /* CARROSEL DE FILMES */
+
+ .box-filme {
+     height: 100%;
+     width: 100%;
+     display: block;
  }
 
