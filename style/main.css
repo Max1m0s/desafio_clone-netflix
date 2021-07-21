@@ -9,16 +9,19 @@
     box-sizing: border-box; /*limita o tamanho de tudo até a borda da caixa, não rompendo a saída dela*/
 }
 
+/* ELEMENTOS BASE */
+
 body {
     background: var(--preta);
     font-family: 'Times New Roman', Times, serif;
+    color: white;
 }
 
 header .container { /* caixa de navegação e logo || uso do FLEXBOX */
     display: flex;
     flex-direction: row;
     align-items: center; /* alinhamento vertical */
-    justify-content: space-between; /* justify content: alinhamento horizontal || space-between - espaço entre os itens/tags */
+    justify-content: space-between; /* justify content: alinhamento horizontal, sempre deve seguir a mesma direção do flex-direction || space-between - espaço entre os itens/tags */
 }
 
 header .logo {
@@ -34,6 +37,30 @@ header nav a {
     margin-right: 10px;
 }
 
-header nav a:hover { /*formatação para evento específico*/
+header nav a:hover { /* formatação para evento específico */
     color: #fff;
 }
+
+/* FILME PRINCIPAL */
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/img/stranger_things_capa.jpg'); /* linear-gradient cria uma camada fina em gradient, deve ser passado duas vezes a propriedade rgba (red-gree-blue-alfa) */
+
+    height: 400px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column; /* elemento mudado para coluna */
+    justify-content: center;
+    align-items: flex-start /* flex-start - sempre alinha à esquerda */;
+}
+
+.filme-principal .descricao {
+    margin-bottom: 40px;
+}
+
+.titulo {
+    font-size: 40px;
+}
+
